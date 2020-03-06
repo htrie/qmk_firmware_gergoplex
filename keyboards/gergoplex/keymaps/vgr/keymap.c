@@ -32,16 +32,16 @@ const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [WE] = COMBO(we_combo, KC_ESC),
+  [ER] = COMBO(er_combo, KC_ENT),
   [SD] = COMBO(sd_combo, KC_BSPC),
   [DF] = COMBO(df_combo, KC_TAB),
   [XC] = COMBO(xc_combo, KC_MINS),
-  [CV] = COMBO(cv_combo, KC_ENT),
-  [ER] = COMBO(er_combo, KC_NO),
+  [CV] = COMBO(cv_combo, KC_NO),
 
   [UI] = COMBO(ui_combo, KC_ESC),
-  [IO] = COMBO(io_combo, KC_NO),
+  [IO] = COMBO(io_combo, KC_ENT),
   [JK] = COMBO(jk_combo, KC_COLN),
-  [KL] = COMBO(kl_combo, KC_NO),
+  [KL] = COMBO(kl_combo, KC_BSPC),
   [MC] = COMBO(mc_combo, KC_UNDS),
   [CD] = COMBO(cd_combo, KC_DQUO),
 
@@ -58,9 +58,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  		 KC_LGUI, MT(MOD_RCTL, KC_NO), MO(SYMB),    KC_SPC, MO(NUMB), MT(MOD_RALT, KC_NO)
     ),
 [SYMB] = LAYOUT_gergoplex(
-    KC_EXLM, KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE,   KC_GRV,  KC_TILD, XXXXXXX, XXXXXXX, XXXXXXX,
-    KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, XXXXXXX,   KC_PLUS, KC_MINS, KC_SLSH, KC_ASTR, KC_QUOT,
-    KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, XXXXXXX,   KC_AMPR, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
+    KC_EXLM, KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE,   KC_GRV,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_AMPR,   KC_PLUS, KC_MINS, KC_SLSH, KC_ASTR, KC_QUOT,
+    KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS,
                       XXXXXXX, XXXXXXX, KC_TRNS,   KC_EQL,  XXXXXXX, XXXXXXX
     ),
 [NUMB] = LAYOUT_gergoplex(
