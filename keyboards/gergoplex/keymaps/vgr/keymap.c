@@ -29,8 +29,8 @@ combo_t key_combos[COMBO_COUNT] = {
   [ER] = COMBO(er_combo, KC_ENT),
   [SD] = COMBO(sd_combo, KC_BSPC),
   [DF] = COMBO(df_combo, KC_TAB),
-  [XC] = COMBO(xc_combo, KC_NO),
-  [CV] = COMBO(cv_combo, KC_MINS),
+  [XC] = COMBO(xc_combo, KC_MINS),
+  [CV] = COMBO(cv_combo, KC_NO),
 
   [UI] = COMBO(ui_combo, KC_ESC),
   [IO] = COMBO(io_combo, KC_ENT),
