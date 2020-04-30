@@ -6,28 +6,28 @@
 #define ARRW 3
 
 enum combos {
-	WE,SD,
-	IO,KL,
+  WE,DF,
+  IO,JK,
 };
 
 const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END};
-const uint16_t PROGMEM sd_combo[] = {KC_S, KC_D, COMBO_END};
+const uint16_t PROGMEM df_combo[] = {KC_D, KC_F, COMBO_END};
 const uint16_t PROGMEM io_combo[] = {KC_I, KC_O, COMBO_END};
-const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [WE] = COMBO(we_combo, KC_ESC),
-  [SD] = COMBO(sd_combo, KC_BSPC),
+  [DF] = COMBO(df_combo, KC_TAB),
   [IO] = COMBO(io_combo, KC_ENT),
-  [KL] = COMBO(kl_combo, KC_BSPC),
+  [JK] = COMBO(jk_combo, KC_BSPC),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_gergoplex(
-    KC_Q,  			 			  KC_W, KC_E, KC_R, KC_T,  	KC_Y, KC_U, KC_I,    KC_O, 	 KC_P, 
-    MT(MOD_LCTL, KC_A), KC_S, KC_D, KC_F, KC_G,  	KC_H, KC_J, KC_K,    KC_L, 	 LT(ARRW, KC_SCLN),
-    MT(MOD_LSFT, KC_Z), KC_X, KC_C, KC_V, KC_B,  	KC_N, KC_M, KC_COMM, KC_DOT, MT(MOD_RSFT, KC_SLSH),
- 		 KC_LGUI, MT(MOD_RCTL, KC_NO), MO(SYMB),    KC_SPC, MO(NUMB), MT(MOD_RALT, KC_NO)
+    KC_Q,               KC_W,               KC_E, KC_R, KC_T,   KC_Y, KC_U, KC_I,    KC_O,               KC_P, 
+    MT(MOD_LCTL, KC_A), MT(MOD_LSFT, KC_S), KC_D, KC_F, KC_G,   KC_H, KC_J, KC_K,    MT(MOD_RSFT, KC_L), LT(ARRW, KC_SCLN),
+    KC_Z,               KC_X,               KC_C, KC_V, KC_B,   KC_N, KC_M, KC_COMM, KC_DOT,             KC_SLSH,
+                       KC_LGUI, MT(MOD_RCTL, KC_NO), MO(SYMB),  KC_SPC, MO(NUMB), MT(MOD_RALT, KC_NO)
     ),
 [SYMB] = LAYOUT_gergoplex(
     KC_EXLM, KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE,   KC_GRV,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
